@@ -14,6 +14,7 @@ Dentro del listado está la opción de modificar o borrar el elemento selecciona
 ![Listado de usuarios](/Recursos/ayuda6.png)
 *Listado de los usuarios de la BD con la opción de filtrado*
 
+
 ![Listado de ejercicios](/Recursos/ayuda7.png)
 *Ventana modal con formulario con los datos del usuario*
 
