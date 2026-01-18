@@ -1,0 +1,112 @@
+﻿<UserControl x:Class="Gym24_7.VerEjercicios.Ejercicios"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Gym24_7.VerEjercicios" xmlns:syncfusion="clr-namespace:Syncfusion.Windows.Tools.Controls;assembly=Syncfusion.Shared.WPF"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style TargetType="StackPanel">
+            <Setter Property="Margin" Value="10"></Setter>
+            <Setter Property="Background" Value="White"></Setter>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="Titulo">
+            <Setter Property="Text" Value="Listado de ejercicios"></Setter>
+            <Setter Property="FontSize" Value="26"></Setter>
+            <Setter Property="FontFamily" Value="Cambria"></Setter>
+            <Setter Property="Margin" Value="10,10,5,10"></Setter>
+        </Style>
+        <Style TargetType="syncfusion:ButtonAdv">
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="FontWeight" Value="DemiBold"></Setter>
+            <Setter Property="DockPanel.Dock" Value="Right"></Setter>
+            <Setter Property="Margin" Value="10"></Setter>
+            <Setter Property="Width" Value="90"></Setter>
+            <Setter Property="Height" Value="25"></Setter>
+            <Setter Property="IsEnabled" Value="True"></Setter>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF8E69E3" Offset="0.817"/>
+                        <GradientStop Color="#FFF37BD6" Offset="0.183"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Path=EjercicioSeleccionado}" Value="{x:Null}">
+                    <Setter Property="IsEnabled" Value="False"></Setter>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="NombreEjercicio">
+            <Setter Property="FontWeight" Value="DemiBold"></Setter>
+            <Setter Property="FontSize" Value="14"></Setter>
+            <Setter Property="Margin" Value="2,5,2,5"></Setter>
+        </Style>
+        <DataTemplate x:Key="PlantillaEjercicios">
+            <Border BorderThickness="1" BorderBrush="DarkGray" Margin="3">
+                <StackPanel Background="Orange" Height="240" Width="200">
+                    <StackPanel Height="125" Margin="8">
+                        <Image Stretch="UniformToFill"
+                                Source="{Binding Path=Imagen}" />
+                    </StackPanel>
+                    <TextBlock Style="{StaticResource NombreEjercicio}" 
+                               Text="{Binding Path=Nombre}"
+                               Margin="10,6,10,4"/>
+                    <Separator Background="#FF332C2C" Margin="8,1,8,3"/>
+                    <TextBlock Text="{Binding Path=Informacion}" 
+                               TextWrapping="Wrap"
+                               Margin="10,0,10,6" 
+                               FontSize="11"/>
+                </StackPanel>
+            </Border>
+        </DataTemplate>
+        <Style TargetType="ListBox">
+            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled"></Setter>
+            <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"></Setter>
+            <Setter Property="Height" Value="450"></Setter>
+            <Setter Property="Margin" Value="10"></Setter>
+            <Setter Property="Background" Value="#FFC9B9F6"></Setter>
+            <Setter Property="Visibility" Value="Visible"></Setter>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Path=ListaEjercicios}" Value="{x:Null}">
+                    <Setter Property="Visibility" Value="Collapsed"></Setter>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="MensajeVacio">
+            <Setter Property="Text" Value=""></Setter>
+            <Setter Property="Margin" Value="5"></Setter>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Path=ListaEjercicios}" Value="{x:Null}">
+                    <Setter Property="Text" Value="No se han encontrado ejercicios"></Setter>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+    <StackPanel>
+        <TextBlock Style="{StaticResource Titulo}"/>
+        <DockPanel LastChildFill="False">
+            <syncfusion:ButtonAdv 
+                Label="Eliminar"
+                Margin="10"
+                Command="{Binding Path=EliminarEjercicioCommand}"
+                SmallIcon="http://icongal.com/gallery/image/89463/reject_exit_no_close_delete.png" />
+            <syncfusion:ButtonAdv 
+                Label="Editar"
+                Command="{Binding Path=EditarEjercicioCommand}"
+                SmallIcon="http://icongal.com/gallery/image/128978/edit_report.png" />
+        </DockPanel>
+        <ListBox ItemsSource="{Binding Path=ListaEjercicios}"
+                 SelectedItem="{Binding Path=EjercicioSeleccionado}"
+                 ItemTemplate="{StaticResource PlantillaEjercicios}">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel IsItemsHost="True" />
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+        </ListBox>
+        <TextBlock Style="{StaticResource MensajeVacio}"/>
+    </StackPanel>
+</UserControl>

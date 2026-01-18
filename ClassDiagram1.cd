@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Gym24_7.Properties.Settings" Collapsed="true">
+    <Position X="1.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAIAQAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gym24_7.Modelo.ListadoEjercicios" Collapsed="true">
+    <Position X="10" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAACAAAAAgACAAAAAgAAAEAAAABAAAAAAAAAAAgA=</HashCode>
+      <FileName>Modelo\ListadoEjercicios.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gym24_7.Modelo.Respuesta" Collapsed="true">
+    <Position X="10" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAACA=</HashCode>
+      <FileName>Modelo\Respuesta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gym24_7.Modelo.Usuario" Collapsed="true">
+    <Position X="3" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAECAAABAAAAAAKAAAACgAACAIAAAgCAAAAAAgAAAgI=</HashCode>
+      <FileName>Modelo\Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gym24_7.Servicios.ApiRestService" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIgAAgAAAAAAIAAAAgQAAAAQAAAAAAAAICBAAAAgAAA=</HashCode>
+      <FileName>Servicios\ApiRestService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gym24_7.Servicios.HashService" Collapsed="true">
+    <Position X="3" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Servicios\HashService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gym24_7.Servicios.EditarUsuarioMessage" Collapsed="true">
+    <Position X="8.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Servicios\MensajeriaService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gym24_7.Servicios.MessageBoxService" Collapsed="true">
+    <Position X="4.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Servicios\MessageBoxService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gym24_7.Servicios.NavegacionService" Collapsed="true">
+    <Position X="6.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAABCAIEAAIAAAgAAAoAAAAAEgAAA=</HashCode>
+      <FileName>Servicios\NavegacionService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gym24_7.Servicios.OpenFileDialogService" Collapsed="true">
+    <Position X="8.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Servicios\OpenFileDialogService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gym24_7.Servicios.ValidacionService" Collapsed="true">
+    <Position X="6.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Servicios\ValidacionService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Trivial.servicios.AzureService" Collapsed="true">
+    <Position X="1.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AECAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAABAAA=</HashCode>
+      <FileName>Servicios\AzureService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gym24_7.Sesion.InicioSesion" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAggAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sesion\InicioSesion.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Gym24_7.Sesion.InicioSesionVM" Collapsed="true">
+    <Position X="8.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAEAACAAEAAgABAAAAACAEAIAgAACAAA=</HashCode>
+      <FileName>Sesion\InicioSesionVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gym24_7.VentanasEdicion.EditarEjercicio" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>VentanasEdicion\EditarEjercicio.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Gym24_7.VentanasEdicion.EditarEjercicioVM" Collapsed="true">
+    <Position X="4.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAEAAAAAAAAACAAAAAEEAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>VentanasEdicion\EditarEjercicioVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gym24_7.VentanasEdicion.EditarUsuario" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>VentanasEdicion\EditarUsuario.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Gym24_7.VentanasEdicion.EditarUsuarioVM" Collapsed="true">
+    <Position X="10" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAACAAAAEAAAABAAgAAEAAgABAIAAAAAAA=</HashCode>
+      <FileName>VentanasEdicion\EditarUsuarioVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gym24_7.Vistas.Ejercicios.AñadirEjercicio" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="1.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vistas\Ejercicios\AñadirEjercicio.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Gym24_7.Vistas.Ejercicios.AñadirEjercicioVM" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAIAAAAAACAAAAAEAAAAQABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vistas\Ejercicios\AñadirEjercicioVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gym24_7.Vistas.Ejercicios.VerEjerciciosVM" Collapsed="true">
+    <Position X="8.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAABEAAAABAAAgAAAAAAAAAAAAAAAAAACAAAgAgCAAA=</HashCode>
+      <FileName>Vistas\Ejercicios\VerEjerciciosVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gym24_7.VerEjercicios.Ejercicios" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="1.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vistas\Ejercicios\VerEjercicios.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Gym24_7.Vistas.Inicio.Inicio" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vistas\Inicio\Inicio.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Gym24_7.Vistas.Usuarios.AñadirUsuario" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vistas\Usuarios\AñadirUsuario.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Gym24_7.Vistas.Usuarios.AñadirUsuarioVM" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAgAAAAAAAAQAgAAAAAAAAAAAgAAAAI=</HashCode>
+      <FileName>Vistas\Usuarios\AñadirUsuarioVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gym24_7.VerUsuarios.Usuarios" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Vistas\Usuarios\VerUsuarios.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Gym24_7.VerUsuarios.VerUsuariosVM" Collapsed="true">
+    <Position X="10" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BEAAEAAAABAAAAEAAAQAAIAAABAAAAAgAAAAEABAABA=</HashCode>
+      <FileName>Vistas\Usuarios\VerUsuariosVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gym24_7.App" Collapsed="true">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gym24_7.MainWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="1.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Gym24_7.MainWindowVM" Collapsed="true">
+    <Position X="3" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEABIhAAAACgAAAgAAAIAsABAIBAAAAAAAAACAg=</HashCode>
+      <FileName>MainWindowVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

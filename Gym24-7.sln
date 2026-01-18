@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34601.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gym24-7", "Gym24-7.csproj", "{0CB45EA6-0982-4246-B864-5B0340F97080}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Gym24-7EscritorioSetup", "..\Gym24-7EscritorioSetup\Gym24-7EscritorioSetup.vdproj", "{6EE51F21-03A5-46C9-B5F3-878114A4ADB6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0CB45EA6-0982-4246-B864-5B0340F97080}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CB45EA6-0982-4246-B864-5B0340F97080}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CB45EA6-0982-4246-B864-5B0340F97080}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CB45EA6-0982-4246-B864-5B0340F97080}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EE51F21-03A5-46C9-B5F3-878114A4ADB6}.Debug|Any CPU.ActiveCfg = Debug
+		{6EE51F21-03A5-46C9-B5F3-878114A4ADB6}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6D6C924D-B1B6-4397-8672-5A711BE8244F}
+	EndGlobalSection
+EndGlobal

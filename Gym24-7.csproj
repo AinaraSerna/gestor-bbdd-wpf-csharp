@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>Gym24_7</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Recursos\icono.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="48.ico" />
+    <None Remove="Recursos\add-user-2-xxl.png" />
+    <None Remove="Recursos\icon.ico" />
+    <None Remove="Sesion\logo.png" />
+    <None Remove="Vistas\Inicio\logo.png" />
+    <None Remove="Vistas\Usuarios\add-user-2-xxl.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Recursos\icono.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.23.0" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="RestSharp" Version="112.1.0" />
+    <PackageReference Include="Syncfusion.SfNavigationDrawer.WPF" Version="28.2.4" />
+    <PackageReference Include="Syncfusion.SfTextInputLayout.WPF" Version="28.2.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="48.ico" />
+    <Resource Include="Recursos\add-user-2-xxl.png" />
+    <Resource Include="Recursos\icono.ico" />
+    <Resource Include="Sesion\logo.png" />
+    <Resource Include="Vistas\Inicio\logo.png" />
+    <Resource Include="Vistas\Usuarios\add-user-2-xxl.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>

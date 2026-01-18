@@ -1,0 +1,108 @@
+﻿<Window x:Class="Gym24_7.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gym24_7" xmlns:syncfusion="clr-namespace:Syncfusion.UI.Xaml.NavigationDrawer;assembly=Syncfusion.SfNavigationDrawer.WPF"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        Title="Gym24/7" Height="620" Width="1000" MinHeight="600" MinWidth="1000">
+    <Window.Resources>
+        <Style TargetType="syncfusion:SfNavigationDrawer">
+            <Setter Property="DrawerBackground" Value="#FF641464"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+        </Style>
+        <Style TargetType="syncfusion:NavigationItem" x:Key="Cabeceras">
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="IsExpanded" Value="True"></Setter>
+            <Setter Property="SelectionBackground" Value="Orange"></Setter>
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="FontWeight" Value="ExtraBold"></Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="syncfusion:NavigationItem" x:Key="Items">
+            <Setter Property="SelectionBackground" Value="Orange"></Setter>
+            <Setter Property="FontWeight" Value="DemiBold"></Setter>
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="FontWeight" Value="Bold"></Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <DockPanel LastChildFill="True">
+        <syncfusion:SfNavigationDrawer
+            x:Name="MenuLateral"
+            DisplayMode="Expanded">
+            <syncfusion:NavigationItem
+                Style="{StaticResource Cabeceras}"
+                Header="Inicio"
+                IsSelected="True"
+                Command="{Binding Path=VerInicioCommand}">
+                <syncfusion:NavigationItem.Icon>
+                    <Image Source="http://icongal.com/gallery/image/433448/home_actions.png" />
+                </syncfusion:NavigationItem.Icon>
+            </syncfusion:NavigationItem>
+            <syncfusion:NavigationItem
+                Header="Usuarios"
+                Style="{StaticResource Cabeceras}"
+                IsSelected="False">
+                <syncfusion:NavigationItem.Icon>
+                    <Image Source="http://icongal.com/gallery/image/372581/user_yellow.png" />
+                </syncfusion:NavigationItem.Icon>
+                <syncfusion:NavigationItem 
+                    Header="Gestión usuarios" 
+                    Command="{Binding Path=VerUsuariosCommand}"
+                    Style="{StaticResource Items}">
+                    <syncfusion:NavigationItem.Icon>
+                        <Image Source="http://icongal.com/gallery/image/56007/edit_user_yellow.png"/>
+                    </syncfusion:NavigationItem.Icon>
+                </syncfusion:NavigationItem>
+                <syncfusion:NavigationItem 
+                    Header="Añadir usuario" 
+                    Command="{Binding Path=AñadirUsuarioCommand}"
+                    Style="{StaticResource Items}">
+                    <syncfusion:NavigationItem.Icon>
+                        <Image Source="http://icongal.com/gallery/image/55960/add_user_yellow.png"/>
+                    </syncfusion:NavigationItem.Icon>
+                </syncfusion:NavigationItem>
+            </syncfusion:NavigationItem>
+            <syncfusion:NavigationItem
+                Style="{StaticResource Cabeceras}"
+                Header="Ejercicios"
+                IsSelected="False"
+                Command="{Binding Path=VerEjerciciosCommand}">
+                <syncfusion:NavigationItem.Icon>
+                    <Image Source="http://icongal.com/gallery/image/382371/sport_dumbbell.png"/>
+                </syncfusion:NavigationItem.Icon>
+                <syncfusion:NavigationItem 
+                    Header="Gestión ejercicios" 
+                    Command="{Binding Path=VerEjerciciosCommand}"
+                    Style="{StaticResource Items}">
+                    <syncfusion:NavigationItem.Icon>
+                        <Image Source="http://icongal.com/gallery/image/46706/barbell_weights_fitness_physical_dumbell_gym_weight_dumbbell_weightlifting.png"/>
+                    </syncfusion:NavigationItem.Icon>
+                </syncfusion:NavigationItem>
+                <syncfusion:NavigationItem 
+                    Header="Añadir ejercicio" 
+                    Command="{Binding Path=AñadirEjercicioCommand}"
+                    Style="{StaticResource Items}">
+                    <syncfusion:NavigationItem.Icon>
+                        <Image Source="http://icongal.com/gallery/image/98926/add_plus.png"/>
+                    </syncfusion:NavigationItem.Icon>
+                </syncfusion:NavigationItem>
+            </syncfusion:NavigationItem>
+            <syncfusion:NavigationItem ItemType="Separator" Margin="5,0,5,0" IsEnabled="False"/>
+            <syncfusion:NavigationItem 
+                Header="Ayuda" 
+                Command="{Binding Path=AbrirAyudaCommand}"
+                Style="{StaticResource Cabeceras}">
+                <syncfusion:NavigationItem.Icon>
+                    <Image Source="http://icongal.com/gallery/image/81431/help_question_mark_badge.png"/>
+                </syncfusion:NavigationItem.Icon>
+            </syncfusion:NavigationItem>
+        </syncfusion:SfNavigationDrawer>
+        <ContentControl Content="{Binding Path=OpcionActual}"></ContentControl>
+    </DockPanel>
+</Window>

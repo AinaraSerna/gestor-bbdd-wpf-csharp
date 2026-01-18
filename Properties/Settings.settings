@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Gym24_7.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="LicenciaSyncfusion" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">MzA3OTg0N0AzMjM0MmUzMDJlMzBiRFZjNFYyS2txK3QrN2E0bnlDanRVcEhabHlSMk9oditZZHYrdm5jWG9zPQ==</Value>
+    </Setting>
+    <Setting Name="UrlBase" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost:8080/gym24-7/api/</Value>
+    </Setting>
+    <Setting Name="UrlAzure" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://gym24-7.westeurope.cloudapp.azure.com:8080/gym24-7/api/</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

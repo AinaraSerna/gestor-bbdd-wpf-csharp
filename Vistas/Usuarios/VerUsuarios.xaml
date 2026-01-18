@@ -1,0 +1,127 @@
+﻿<UserControl x:Class="Gym24_7.VerUsuarios.Usuarios"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Gym24_7.VerUsuarios" xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+             mc:Ignorable="d" d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style TargetType="StackPanel">
+            <Setter Property="Background" Value="White"></Setter>
+            <Setter Property="Margin" Value="10"></Setter>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="Margin" Value="10,0,0,0"></Setter>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="Titulo">
+            <Setter Property="Text" Value="Listado de usuarios"></Setter>
+            <Setter Property="FontSize" Value="26"></Setter>
+            <Setter Property="FontFamily" Value="Cambria"></Setter>
+            <Setter Property="Margin" Value="10,10,5,10"></Setter>
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="DockPanel.Dock" Value="Left"></Setter>
+            <Setter Property="Width" Value="120"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Left"></Setter>
+            <Setter Property="Margin" Value="5"></Setter>
+        </Style>
+        <DataTemplate x:Key="PlantillaUsuarios">
+            <StackPanel Margin="2">
+                <TextBlock Text="{Binding Path=Nombre}" FontSize="18" Margin="0,0,0,3" FontWeight="DemiBold"></TextBlock>
+                <WrapPanel>
+                    <Image Width="10" Margin="0,0,2,0" Source="http://icongal.com/gallery/image/372581/user_yellow.png"></Image>
+                    <TextBlock Text="{Binding Path=Rol}"></TextBlock>
+                </WrapPanel>
+                <WrapPanel>
+                    <Image Width="10" Margin="0,0,2,0" Source="http://icongal.com/gallery/image/115229/envelope_email.png"></Image>
+                    <TextBlock Text="{Binding Path=Correo}"></TextBlock>
+                </WrapPanel>
+                <WrapPanel>
+                    <Image Width="10" Margin="0,0,2,0" Source="http://icongal.com/gallery/image/57550/receiver_telephone_phone.png"></Image>
+                    <TextBlock Text="{Binding Path=Telefono}"></TextBlock>
+                </WrapPanel>
+            </StackPanel>
+        </DataTemplate>
+        <Style TargetType="syncfusion:ButtonAdv" x:Key="BotonHabilitado">
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="FontWeight" Value="DemiBold"></Setter>
+            <Setter Property="DockPanel.Dock" Value="Right"></Setter>
+            <Setter Property="Width" Value="90"></Setter>
+            <Setter Property="Height" Value="25"></Setter>
+            <Setter Property="IsEnabled" Value="True"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF8E69E3" Offset="0.817"/>
+                        <GradientStop Color="#FFF37BD6" Offset="0.183"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Path=UsuarioSeleccionado}" Value="{x:Null}">
+                    <Setter Property="IsEnabled" Value="False"></Setter>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="ListBoxItem">
+            <Setter Property="Background" Value="#FFF37BD6"></Setter>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Path=Rol}" Value="Cliente">
+                    <Setter Property="Background" Value="#FF8E69E3"></Setter>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="ListBox">
+            <Setter Property="Background" Value="#FFF1D6C4"></Setter>
+            <Setter Property="Margin" Value="10"></Setter>
+            <Setter Property="Visibility" Value="Visible"></Setter>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Path=ListaUsuarios}" Value="{x:Null}">
+                    <Setter Property="Visibility" Value="Collapsed"></Setter>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="MensajeVacio">
+            <Setter Property="Text" Value=""></Setter>
+            <Setter Property="Margin" Value="10"></Setter>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Path=ListaUsuarios}" Value="{x:Null}">
+                    <Setter Property="Text" Value="No se han encontrado usuarios"></Setter>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+    <StackPanel>
+        <TextBlock Style="{StaticResource Titulo}"/>
+        <TextBlock Text="Filtrar por rol"/>
+        
+        <DockPanel LastChildFill="False">
+            <ComboBox ItemsSource="{Binding Path=OpcionesComboBox}"
+                      SelectedItem="{Binding Path=OpcionSeleccionada}"
+                      Margin="10,10,10,20"/>
+
+            <syncfusion:ButtonAdv
+                Label="Eliminar"
+                Margin="10"
+                Command="{Binding Path=EliminarUsuarioCommand}"
+                Style="{StaticResource BotonHabilitado}"
+                SmallIcon="http://icongal.com/gallery/image/89463/reject_exit_no_close_delete.png" >
+                
+            </syncfusion:ButtonAdv>
+
+            <syncfusion:ButtonAdv 
+                Label="Editar"
+                Command="{Binding Path=EditarUsuarioCommand}"
+                Style="{StaticResource BotonHabilitado}"
+                SmallIcon="http://icongal.com/gallery/image/128978/edit_report.png" />
+
+        </DockPanel>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <ListBox ItemsSource="{Binding Path=ListaUsuarios}" 
+                     SelectedItem="{Binding Path=UsuarioSeleccionado}" 
+                     ItemTemplate="{StaticResource PlantillaUsuarios}"/>
+        </ScrollViewer>
+        <TextBlock Style="{StaticResource MensajeVacio}"></TextBlock>
+    </StackPanel>
+</UserControl>

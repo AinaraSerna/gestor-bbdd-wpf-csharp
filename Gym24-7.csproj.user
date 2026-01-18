@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Sesion\InicioSesion.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="VentanasEdicion\EditarEjercicio.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="VentanasEdicion\EditarUsuario.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\Ejercicios\AñadirEjercicio.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\Ejercicios\VerEjercicios.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\Inicio\Inicio.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\Usuarios\AñadirUsuario.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Vistas\Usuarios\VerUsuarios.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Sesion\InicioSesion.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="VentanasEdicion\EditarEjercicio.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="VentanasEdicion\EditarUsuario.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\Ejercicios\AñadirEjercicio.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\Ejercicios\VerEjercicios.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\Inicio\Inicio.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\Usuarios\AñadirUsuario.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Vistas\Usuarios\VerUsuarios.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
